@@ -1,5 +1,5 @@
 from django.contrib.admin import ModelAdmin, site
-from models import DummyModel
+from models import Dummie
 
 
 class DummyModelAdmin(ModelAdmin):
@@ -7,4 +7,4 @@ class DummyModelAdmin(ModelAdmin):
     list_display = 'dummy_field',
     search_fields = 'dummy_field',
 
-site.register(DummyModel, DummyModelAdmin)
+site.register(Dummie, DummyModelAdmin)

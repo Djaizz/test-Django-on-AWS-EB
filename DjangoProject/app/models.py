@@ -1,5 +1,5 @@
 from django.db.models import Model, CharField
 
 
-class DummyModel(Model):
+class Dummie(Model):
     dummy_field = CharField(max_length=100)
