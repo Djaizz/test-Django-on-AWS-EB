@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-python DjangoProject/manage.py syncdb
+python DjangoProject/manage.py makemigrations
+python DjangoProject/manage.py migrate
 python DjangoProject/manage.py collectstatic
 
 git add --all
