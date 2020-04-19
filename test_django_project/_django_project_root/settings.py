@@ -6,6 +6,11 @@ For the full list of settings and their values, see https://docs.djangoproject.c
 
 
 import os
+import sys
+
+
+# check if running on Linux cluster or local Mac
+_LINUX = sys.platform.startswith('linux')
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,7 +26,12 @@ SECRET_KEY = '_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+INTERNAL_IPS = ['127.0.0.1']
+
+ALLOWED_HOSTS = \
+    ['.elasticbeanstalk.com'] \
+    if _LINUX \
+    else ['127.0.0.1', 'localhost']
 
 
 # Application definition
