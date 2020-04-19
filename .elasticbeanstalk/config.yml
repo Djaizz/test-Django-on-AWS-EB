@@ -1,0 +1,22 @@
+branch-defaults:
+  default:
+    environment: test-Django
+    group_suffix: null
+
+  master:
+    environment: test-Django
+    group_suffix: null
+
+global:
+  application_name: test
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Python 3.7
+  default_region: ap-northeast-1
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: default
+  repository: null
+  sc: null
+  workspace_type: Application
