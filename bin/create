@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 
 
-eb create
+eb create test-Django \
+  --vpc.id vpc-6886010f \
+  --vpc.dbsubnets subnet-6c411e25,subnet-1e7df545 \
+  --vpc.ec2subnets subnet-6c411e25,subnet-1e7df545 \
+  --vpc.elbsubnets subnet-6c411e25,subnet-1e7df545 \
+  --vpc.elbpublic \
+  --vpc.publicip

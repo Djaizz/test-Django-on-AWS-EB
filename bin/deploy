@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 
-eb deploy
+eb deploy test-Django
