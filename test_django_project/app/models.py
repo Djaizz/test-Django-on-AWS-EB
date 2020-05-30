@@ -1,5 +1,7 @@
-from django.db.models import Model
+from django.db.models.base import Model
+from django.db.models.deletion import CASCADE
 from django.db.models.fields import CharField
+from django.db.models.fields.related import ForeignKey, ManyToManyField, OneToOneField
 
 
 class M0(Model):
@@ -11,3 +13,12 @@ class M1(M0):
 
     def __str__(self):
         return f'{self.f0} | {self.f1}'
+
+
+class M(Model):
+    fk = ForeignKey(M1, on_delete=CASCADE)
+    m2m = ManyToManyField(M1)
+    o2o = OneToOneField(M1, on_delete=CASCADE)
+
+    def __str__(self):
+        return
