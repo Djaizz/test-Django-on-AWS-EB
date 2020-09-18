@@ -16,9 +16,9 @@ class M1(M0):
 
 
 class M(Model):
-    fk = ForeignKey(M1, on_delete=CASCADE)
-    m2m = ManyToManyField(M1)
-    o2o = OneToOneField(M1, on_delete=CASCADE)
+    fk = ForeignKey(M1, on_delete=CASCADE, related_name='fk')
+    m2m = ManyToManyField(M1, related_name='m2m')
+    o2o = OneToOneField(M1, on_delete=CASCADE, related_name='o2o')
 
     def __str__(self):
         return
