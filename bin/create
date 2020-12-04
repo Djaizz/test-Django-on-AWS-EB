@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 
-VPC=vpc-6886010f
-SUBNETS=subnet-6c411e25,subnet-1e7df545
+VPC=vpc-10855274
+SUBNETS=subnet-00e55358,subnet-1ba6c07f
 
 
 eb create test-Django \
