@@ -1,11 +1,6 @@
 branch-defaults:
-  default:
-    environment: test-Django
-    group_suffix: null
-
   master:
     environment: test-Django
-    group_suffix: null
 
 environment-defaults:
   test-Django:
@@ -14,15 +9,13 @@ environment-defaults:
 
 global:
   application_name: test
-  branch: null
   default_ec2_keyname: test-Django
   default_platform: Python 3.7
   default_region: us-west-1
   include_git_submodules: true
-  instance_profile: aws-elasticbeanstalk-ec2-role
+  instance_profile: null
   platform_name: null
   platform_version: null
   profile: default
-  repository: null
   sc: git
   workspace_type: Application
