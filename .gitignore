@@ -56,12 +56,8 @@ docs/_build/
 # PyBuilder
 target/
 
-# IntelliJ IDEA files
-*.iml
-.idea/
+# Visual Studio Code files
+.vscode/
 
 # SQLite DB Files
 *.sqlite3
-
-# Static Files
-static/
