@@ -1,5 +1,1 @@
-Django >= 3.1.1
-
-# AWS EB does not automatically install this required package for Python 3.7 platform
-# https://forums.aws.amazon.com/thread.jspa?threadID=320243
-GUnicorn >= 20.0.4
+Django >= 3.1.4
