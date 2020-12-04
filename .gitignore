@@ -61,3 +61,6 @@ target/
 
 # SQLite DB Files
 *.sqlite3
+
+# Static Files
+static/
