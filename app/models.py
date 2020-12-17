@@ -35,6 +35,8 @@ class M0(PolymorphicModel):
 
         default_related_name = 'm0s'
 
+        ordering = 'f0',
+
     def __str__(self):
         return f'{self.id} | F0: {self.f0}'
 
@@ -66,6 +68,8 @@ class M1(M0):
         db_table = 'M1'
 
         default_related_name = 'm1s'
+
+        ordering = 'f1',
 
     def __str__(self):
         return f'{self.id} | F0: {self.f0} | F1: {self.f1}'
@@ -128,6 +132,8 @@ class M1A(M0):
 
         default_related_name = 'm1as'
 
+        ordering = 'f1a',
+
     def __str__(self):
         return f'{self.id} | F0: {self.f0} | F1a: {self.f1a}'
 
@@ -159,6 +165,8 @@ class M2(M1):
         db_table = 'M2'
 
         default_related_name = 'm2s'
+
+        ordering = 'f2',
 
     def __str__(self):
         return f'{self.id} | F0: {self.f0} | F1: {self.f1} | F2: {self.f2}'
@@ -192,6 +200,8 @@ class M2A(M1A):
 
         default_related_name = 'm2as'
 
+        ordering = 'f2a',
+
     def __str__(self):
         return f'{self.id} | F0: {self.f0} | F1: {self.f1} | F2a: {self.f2a}'
 
@@ -223,6 +233,8 @@ class M2B(M1, M1A):
         db_table = 'M2B'
 
         default_related_name = 'm2bs'
+
+        ordering = 'f2b',
 
     def __str__(self):
         return f'{self.id} | F0: {self.f0} | ' \
