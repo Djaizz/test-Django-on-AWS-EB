@@ -1,21 +1,18 @@
 branch-defaults:
   master:
-    environment: test-Django
-
-environment-defaults:
-  test-Django:
-    branch: null
-    repository: null
-
+    environment: TestDjango
+    group_suffix: null
 global:
-  application_name: test
+  application_name: TestDjango
+  branch: null
   default_ec2_keyname: test-Django
-  default_platform: Python 3.7
+  default_platform: Python 3.7 running on 64bit Amazon Linux 2
   default_region: us-west-1
   include_git_submodules: true
   instance_profile: null
   platform_name: null
   platform_version: null
   profile: default
+  repository: null
   sc: git
   workspace_type: Application
