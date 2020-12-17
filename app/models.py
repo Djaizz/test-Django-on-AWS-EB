@@ -4,10 +4,11 @@ from django.db.models.fields import CharField
 from django.db.models.fields.related import \
     ForeignKey, ManyToManyField, OneToOneField
 
+from model_utils.models import TimeStampedModel
 from polymorphic.models import PolymorphicModel
 
 
-class M0(PolymorphicModel):
+class M0(PolymorphicModel, TimeStampedModel):
     f0 = CharField(
             verbose_name='Field 0',
             help_text='Field 0',
