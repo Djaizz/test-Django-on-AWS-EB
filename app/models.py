@@ -39,7 +39,7 @@ class M0(PolymorphicModel, TimeStampedModel):
         ordering = 'f0',
 
     def __str__(self):
-        return f'{self.id} | F0: {self.f0}'
+        return f'{type(self).__name__} #{self.id} | F0: {self.f0}'
 
 
 class M1(M0):
@@ -73,7 +73,8 @@ class M1(M0):
         ordering = 'f1',
 
     def __str__(self):
-        return f'{self.id} | F0: {self.f0} | F1: {self.f1}'
+        return f'{type(self).__name__} #{self.id} | ' \
+               f'F0: {self.f0} | F1: {self.f1}'
 
 
 class M1A(M0):
@@ -136,7 +137,8 @@ class M1A(M0):
         ordering = 'f1a',
 
     def __str__(self):
-        return f'{self.id} | F0: {self.f0} | F1a: {self.f1a}'
+        return f'{type(self).__name__} #{self.id} | ' \
+               f'F0: {self.f0} | F1A: {self.f1a}'
 
 
 class M2(M1):
@@ -170,7 +172,8 @@ class M2(M1):
         ordering = 'f2',
 
     def __str__(self):
-        return f'{self.id} | F0: {self.f0} | F1: {self.f1} | F2: {self.f2}'
+        return f'{type(self).__name__} #{self.id} | ' \
+               f'F0: {self.f0} | F1: {self.f1} | F2: {self.f2}'
 
 
 class M2A(M1A):
@@ -204,7 +207,8 @@ class M2A(M1A):
         ordering = 'f2a',
 
     def __str__(self):
-        return f'{self.id} | F0: {self.f0} | F1: {self.f1} | F2a: {self.f2a}'
+        return f'{type(self).__name__} #{self.id} | ' \
+               f'F0: {self.f0} | F1A: {self.f1a} | F2A: {self.f2a}'
 
 
 class M2B(M1, M1A):
@@ -238,8 +242,8 @@ class M2B(M1, M1A):
         ordering = 'f2b',
 
     def __str__(self):
-        return f'{self.id} | F0: {self.f0} | ' \
-               f'F1: {self.f1} | F1a: {self.f1a} | F2b: {self.f2b}'
+        return f'{type(self).__name__} #{self.id} | F0: {self.f0} | ' \
+               f'F1: {self.f1} | F1A: {self.f1a} | F2B: {self.f2b}'
 
 
 class M(Model):
@@ -459,4 +463,4 @@ class M(Model):
         default_related_name = 'ms'
 
     def __str__(self):
-        return f'{self.id} M'
+        return f'{type(self).__name__} #{self.id}'
