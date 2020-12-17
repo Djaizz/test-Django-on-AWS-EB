@@ -246,7 +246,7 @@ class M2B(M1, M1A):
                f'F1: {self.f1} | F1A: {self.f1a} | F2B: {self.f2b}'
 
 
-class M(Model):
+class M(TimeStampedModel):
     RELATED_NAME = 'ms'
     RELATED_QUERY_NAME = 'm'
 
