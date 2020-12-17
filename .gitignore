@@ -56,9 +56,6 @@ docs/_build/
 # PyBuilder
 target/
 
-# Visual Studio Code files
-.vscode/
-
 # SQLite DB Files
 *.sqlite3
 
