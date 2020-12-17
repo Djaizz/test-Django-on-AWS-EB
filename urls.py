@@ -1,9 +1,15 @@
 from django.contrib import admin
-from django.urls.conf import path
+from django.urls.conf import include, path
 from django.views.generic.base import RedirectView
 
 
 urlpatterns = [
+    # Home-Redirected URLs
     path('', RedirectView.as_view(url='admin')),
-    path('admin/', admin.site.urls)
+
+    # Admin URLS
+    path('admin/', admin.site.urls),
+
+    # Query Profiling URLs
+    path('silk/', include('silk.urls', namespace='silk'))
 ]
