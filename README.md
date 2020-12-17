@@ -1,1 +1,1 @@
-# Test Django Deployment on AWS Elastic Beanstalk
+# Django Deployment & Profiling Tests
