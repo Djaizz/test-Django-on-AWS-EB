@@ -11,21 +11,17 @@ from .models import M0, M1, M1A, M2, M2A, M2B, M
 @register(M0)
 class M0Admin(ModelAdmin):
     list_display = \
-        'f0', #\
-        # 'modified'
+        '_str', \
+        'modified'
 
-    # list_display_links = 'f0',
+    list_display_links = '_str',
 
-    # search_fields = 'f0',
+    search_fields = '_str',
 
     show_full_result_count = False
 
-    def get_queryset(self, request):
-        query_set = super().get_queryset(request=request)
-
-        return query_set \
-            if request.resolver_match.url_name.endswith('_change') \
-          else query_set.only(*self.list_display)
+    def _str(self, obj):
+        return str(obj)
 
     @silk_profile(name=f'{__module__}: {M0._meta.verbose_name}')
     def changeform_view(self, *args, **kwargs):
@@ -38,7 +34,18 @@ class M0Admin(ModelAdmin):
 
 @register(M1)
 class M1Admin(ModelAdmin):
+    list_display = \
+        '_str', \
+        'modified'
+
+    list_display_links = '_str',
+
+    search_fields = '_str',
+
     show_full_result_count = False
+
+    def _str(self, obj):
+        return str(obj)
 
     @silk_profile(name=f'{__module__}: {M1._meta.verbose_name}')
     def changeform_view(self, *args, **kwargs):
@@ -51,7 +58,18 @@ class M1Admin(ModelAdmin):
 
 @register(M1A)
 class M1AAdmin(ModelAdmin):
+    list_display = \
+        '_str', \
+        'modified'
+
+    list_display_links = '_str',
+
+    search_fields = '_str',
+
     show_full_result_count = False
+
+    def _str(self, obj):
+        return str(obj)
 
     @silk_profile(name=f'{__module__}: {M1A._meta.verbose_name}')
     def changeform_view(self, *args, **kwargs):
@@ -64,7 +82,18 @@ class M1AAdmin(ModelAdmin):
 
 @register(M2)
 class M2Admin(ModelAdmin):
+    list_display = \
+        '_str', \
+        'modified'
+
+    list_display_links = '_str',
+
+    search_fields = '_str',
+
     show_full_result_count = False
+
+    def _str(self, obj):
+        return str(obj)
 
     @silk_profile(name=f'{__module__}: {M2._meta.verbose_name}')
     def changeform_view(self, *args, **kwargs):
@@ -77,7 +106,18 @@ class M2Admin(ModelAdmin):
 
 @register(M2A)
 class M2AAdmin(ModelAdmin):
+    list_display = \
+        '_str', \
+        'modified'
+
+    list_display_links = '_str',
+
+    search_fields = '_str',
+
     show_full_result_count = False
+
+    def _str(self, obj):
+        return str(obj)
 
     @silk_profile(name=f'{__module__}: {M2A._meta.verbose_name}')
     def changeform_view(self, *args, **kwargs):
@@ -90,7 +130,18 @@ class M2AAdmin(ModelAdmin):
 
 @register(M2B)
 class M2BAdmin(ModelAdmin):
+    list_display = \
+        '_str', \
+        'modified'
+
+    list_display_links = '_str',
+
+    search_fields = '_str',
+
     show_full_result_count = False
+
+    def _str(self, obj):
+        return str(obj)
 
     @silk_profile(name=f'{__module__}: {M2B._meta.verbose_name}')
     def changeform_view(self, *args, **kwargs):
@@ -103,7 +154,18 @@ class M2BAdmin(ModelAdmin):
 
 @register(M)
 class MAdmin(ModelAdmin):
+    list_display = \
+        '_str', \
+        'modified'
+
+    list_display_links = '_str',
+
+    search_fields = '_str',
+
     show_full_result_count = False
+
+    def _str(self, obj):
+        return str(obj)
 
     @silk_profile(name=f'{__module__}: {M._meta.verbose_name}')
     def changeform_view(self, *args, **kwargs):
