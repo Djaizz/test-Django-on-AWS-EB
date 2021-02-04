@@ -60,7 +60,7 @@ target/
 *.sqlite3
 
 # Static Files
-static/
+.staticfiles/
 
 # Elastic Beanstalk Files
 # .elasticbeanstalk/*
