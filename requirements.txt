@@ -1,2 +1,2 @@
-# H1st-Django Integration
-https://GitHub.com/TheVinhLuong102/H1st-Django/archive/main.zip
+https://GitHub.com/H1st-AI/H1st/archive/dev.zip
+https://GitHub.com/H1st-AI/H1st-Django/archive/main.zip
